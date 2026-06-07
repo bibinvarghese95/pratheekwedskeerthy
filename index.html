@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratheek Weds Keerthy</title>
+    <meta name="description" content="Wedding Invitation - Pratheek Kumar MP & Keerthy Bose. Join us in celebrating our special day!">
+    <meta property="og:title" content="Pratheek Weds Keerthy">
+    <meta property="og:description" content="You are cordially invited to the wedding celebration of Pratheek & Keerthy">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #B8860B;
+            --gold-light: #D4A843;
+            --gold-pale: #F0E6C8;
+            --red-deep: #8B1A1A;
+            --red: #C41E3A;
+            --cream: #FFF9F0;
+            --cream-dark: #F5ECD7;
+            --green-deep: #2D5016;
+            --brown-dark: #3E2723;
+            --brown: #5D4037;
+            --white: #FFFFFF;
+            --kasavu: #F5E6C8;
+            --kasavu-border: #C9A84C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: var(--cream);
+            color: var(--brown-dark);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 249, 240, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gold-pale);
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .nav.visible {
+            transform: translateY(0);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: var(--brown);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            font-family: 'Lora', serif;
+        }
+
+        .nav a:hover, .nav a.active {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #FFF9F0 0%, #F5E6C8 50%, #EDD9A8 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(184, 134, 11, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(196, 30, 58, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-ganapathi {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: ganapathiEntrance 1.8s ease 0.3s forwards;
+            position: relative;
+        }
+
+        .hero-ganapathi img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: ganapathiGlow 3.5s ease-in-out infinite 2.5s, ganapathiBreathe 4s ease-in-out infinite 2.5s;
+        }
+
+        @keyframes ganapathiEntrance {
+            0% { opacity: 0; transform: scale(0.4) translateY(-30px); }
+            60% { opacity: 1; transform: scale(1.05) translateY(0); }
+            80% { transform: scale(0.97); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes ganapathiGlow {
+            0%, 100% { filter: drop-shadow(0 0 8px rgba(184, 134, 11, 0.15)); }
+            50% { filter: drop-shadow(0 0 22px rgba(255, 200, 0, 0.4)) drop-shadow(0 0 40px rgba(255, 93, 0, 0.15)); }
+        }
+
+        @keyframes ganapathiBreathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .hero-om {
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.5s forwards;
+            letter-spacing: 3px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: var(--brown);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.7s forwards;
+        }
+
+        .hero-names {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 300;
+            color: var(--red-deep);
+            line-height: 1.2;
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: fadeUp 1.2s ease 0.9s forwards;
+        }
+
+        .hero-names .ampersand {
+            font-style: italic;
+            color: var(--gold);
+            font-size: 0.6em;
+            display: block;
+            margin: 4px 0;
+        }
+
+        .hero-date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--brown);
+            letter-spacing: 3px;
+            margin-top: 16px;
+            opacity: 0;
+            animation: fadeUp 1s ease 1.3s forwards;
+        }
+
+        .hero-photo-frame {
+            margin-top: 30px;
+            width: min(320px, 80vw);
+            height: min(400px, 100vw);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            overflow: hidden;
+            border: 4px solid var(--kasavu-border);
+            box-shadow: 0 20px 60px rgba(184, 134, 11, 0.2), 0 0 0 8px var(--cream), 0 0 0 10px var(--kasavu-border);
+            opacity: 0;
+            animation: fadeUp 1.2s ease 1.5s forwards;
+        }
+
+        .hero-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeUp 1s ease 2s forwards;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 20px;
+            height: 30px;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            position: relative;
+            margin: 0 auto 8px;
+        }
+
+        .scroll-indicator span::after {
+            content: '';
+            width: 4px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 2px;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollBounce 1.5s infinite;
+        }
+
+        .scroll-indicator p {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* ===== KASAVU BORDER DIVIDER ===== */
+        .kasavu-divider {
+            height: 12px;
+            background: linear-gradient(90deg, transparent 0%, var(--kasavu-border) 15%, var(--gold) 50%, var(--kasavu-border) 85%, transparent 100%);
+            position: relative;
+        }
+
+        .kasavu-divider::before,
+        .kasavu-divider::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--kasavu-border);
+        }
+
+        .kasavu-divider::before { top: -2px; }
+        .kasavu-divider::after { bottom: -2px; }
+
+        /* ===== SECTION STYLING ===== */
+        .section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 400;
+            color: var(--red-deep);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 40px;
+        }
+
+        .ornament {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--gold);
+            font-size: 1.5rem;
+            letter-spacing: 8px;
+        }
+
+        /* ===== INVITATION SECTION ===== */
+        .invitation-section {
+            background: linear-gradient(180deg, var(--cream-dark) 0%, var(--cream) 100%);
+            text-align: center;
+        }
+
+        .invitation-card {
+            background: var(--white);
+            border: 2px solid var(--kasavu-border);
+            border-radius: 12px;
+            padding: 50px 30px;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(184, 134, 11, 0.1);
+        }
+
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid var(--gold-pale);
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        .invitation-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--brown);
+        }
+
+        .invitation-text .parents {
+            font-weight: 600;
+            color: var(--brown-dark);
+        }
+
+        .invitation-text .couple-name {
+            font-size: 1.6rem;
+            color: var(--red-deep);
+            font-weight: 600;
+            display: block;
+            margin: 12px 0;
+        }
+
+        /* ===== COUNTDOWN ===== */
+        .countdown-section {
+            background: var(--red-deep);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--gold-pale);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .countdown-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(212, 168, 67, 0.3);
+            border-radius: 12px;
+            padding: 20px 16px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            line-height: 1;
+        }
+
+        .countdown-unit {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-pale);
+            margin-top: 6px;
+        }
+
+        /* ===== EVENTS ===== */
+        .events-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 640px) {
+            .events-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .event-card {
+            background: var(--white);
+            border: 2px solid var(--kasavu-border);
+            border-radius: 16px;
+            padding: 40px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(184, 134, 11, 0.15);
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--red), var(--gold));
+        }
+
+        .event-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .event-type {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--red-deep);
+            margin-bottom: 20px;
+        }
+
+        .event-detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--brown);
+        }
+
+        .event-detail svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .event-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .btn-red {
+            background: var(--red-deep);
+            color: var(--white);
+        }
+
+        .btn-red:hover {
+            background: var(--red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 26, 26, 0.3);
+        }
+
+        .btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ===== OUR STORY TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--gold-pale), var(--gold), var(--gold-pale));
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 639px) {
+            .timeline::before {
+                left: 20px;
+            }
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background: var(--gold);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 3px solid var(--cream);
+            box-shadow: 0 0 0 2px var(--gold);
+            z-index: 1;
+        }
+
+        @media (max-width: 639px) {
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--white);
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--gold-pale);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        @media (max-width: 639px) {
+            .timeline-content {
+                width: calc(100% - 50px);
+                margin-left: auto !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        .timeline-year {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--red-deep);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--brown-dark);
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--brown);
+            line-height: 1.6;
+        }
+
+        .timeline-img {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-top: 12px;
+            border: 1.5px solid var(--gold-pale);
+            background: var(--cream-dark);
+        }
+
+        /* ===== PHOTO GALLERY ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        @media (min-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .gallery-grid .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            aspect-ratio: 3/4;
+            border: 2px solid var(--kasavu-border);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+
+        /* ===== RSVP ===== */
+        .rsvp-section {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+        }
+
+        .rsvp-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--white);
+            border: 2px solid var(--kasavu-border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(184, 134, 11, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--brown);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 8px;
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            color: var(--brown-dark);
+            background: var(--cream);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .radio-option input {
+            display: none;
+        }
+
+        .radio-option label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 0.9rem;
+        }
+
+        .radio-option input:checked + label {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+
+        .event-checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .event-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .event-checkbox:has(input:checked) {
+            background: var(--gold-pale);
+            border-color: var(--gold);
+        }
+
+        .event-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+        }
+
+        .rsvp-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .rsvp-success.show {
+            display: block;
+        }
+
+        .rsvp-success .checkmark {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .rsvp-success h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--red-deep);
+            margin-bottom: 8px;
+        }
+
+        /* ===== CALENDAR SECTION ===== */
+        .calendar-section {
+            background: var(--cream-dark);
+            text-align: center;
+        }
+
+        .calendar-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .calendar-buttons .btn {
+            white-space: nowrap;
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* ===== LOCATION ===== */
+        .location-cards {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 640px) {
+            .location-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .location-card {
+            background: var(--white);
+            border: 2px solid var(--kasavu-border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .location-map {
+            height: 200px;
+            background: var(--cream-dark);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .location-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .location-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--red-deep);
+            margin-bottom: 8px;
+        }
+
+        .location-address {
+            font-size: 0.9rem;
+            color: var(--brown);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        /* ===== DRESS CODE ===== */
+        .dresscode-section {
+            background: var(--cream-dark);
+            text-align: center;
+        }
+
+        .dresscode-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .dresscode-card {
+            background: var(--white);
+            border: 1.5px solid var(--kasavu-border);
+            border-radius: 12px;
+            padding: 30px 20px;
+        }
+
+        .dresscode-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--red-deep);
+            margin-bottom: 12px;
+        }
+
+        .dresscode-card p {
+            font-size: 0.9rem;
+            color: var(--brown);
+            line-height: 1.6;
+        }
+
+        /* ===== ACCOMMODATION ===== */
+        .accommodation-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .accommodation-item {
+            background: var(--white);
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .accommodation-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--brown-dark);
+        }
+
+        .accommodation-item p {
+            font-size: 0.85rem;
+            color: var(--brown);
+        }
+
+        /* ===== GUEST PHOTOS ===== */
+        .photos-upload-section {
+            text-align: center;
+        }
+
+        .photos-upload-card {
+            background: var(--white);
+            border: 2px dashed var(--kasavu-border);
+            border-radius: 16px;
+            padding: 50px 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            transition: border-color 0.3s;
+        }
+
+        .photos-upload-card:hover {
+            border-color: var(--gold);
+        }
+
+        .photos-upload-card .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .photos-upload-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--red-deep);
+            margin-bottom: 8px;
+        }
+
+        .photos-upload-card p {
+            font-size: 0.9rem;
+            color: var(--brown);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .contact-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--red-deep);
+            margin-bottom: 4px;
+        }
+
+        .contact-card p {
+            font-size: 0.85rem;
+            color: var(--brown);
+        }
+
+        .contact-card a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--red-deep);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--gold-pale);
+        }
+
+        .footer-names {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+        }
+
+        .footer-date {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            color: var(--kasavu);
+        }
+
+        .footer-hashtag {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: rgba(245, 230, 200, 0.5);
+        }
+
+        /* ===== WHATSAPP FAB ===== */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 900;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-fab svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+            50% { transform: translateX(-50%) translateY(8px); opacity: 0.3; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 480px) {
+            .section {
+                padding: 60px 16px;
+            }
+
+            .invitation-card {
+                padding: 30px 20px;
+            }
+
+            .rsvp-form {
+                padding: 30px 20px;
+            }
+
+            .countdown-item {
+                min-width: 65px;
+                padding: 14px 10px;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .calendar-buttons {
+                flex-direction: column;
+            }
+
+            .calendar-buttons .btn {
+                flex: unset;
+            }
+        }
+
+        /* ===== LANGUAGE TOGGLE ===== */
+        .lang-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 1100;
+            background: var(--white);
+            border: 1.5px solid var(--kasavu-border);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav.visible ~ .lang-toggle {
+            top: 64px;
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            border: none;
+            background: transparent;
+            font-size: 0.75rem;
+            cursor: pointer;
+            font-family: 'Lora', serif;
+            color: var(--brown);
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background: var(--gold);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ml')">മല</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#story">Story</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#rsvp">RSVP</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-ganapathi">
+            <img src="photos/ganapathi.svg" alt="Lord Ganapathi" loading="eager">
+        </div>
+
+        <p class="hero-om">ॐ श्री गणेशाय नमः</p>
+        <p class="hero-subtitle" data-en="We're Getting Married" data-ml="ഞങ്ങൾ വിവാഹിതരാകുന്നു">We're Getting Married</p>
+
+        <h1 class="hero-names">
+            Pratheek
+            <span class="ampersand">&amp;</span>
+            Keerthy
+        </h1>
+
+        <p class="hero-date">September 5, 2026 &bull; Payyanur</p>
+
+        <div class="hero-photo-frame">
+            <img src="photos/photo_04.jpeg" alt="Pratheek and Keerthy" loading="eager">
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+            <p>Scroll</p>
+        </div>
+    </section>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- Invitation Section -->
+    <section class="invitation-section section" id="invitation">
+        <div class="invitation-card reveal">
+            <div style="margin: 0 auto 16px; width:70px; height:70px;">
+                <img src="photos/ganapathi.svg" alt="Lord Ganapathi" style="width:100%; height:100%; object-fit:contain;">
+            </div>
+            <div class="invitation-text">
+                <p style="color: var(--gold); margin-bottom: 16px; font-style: italic;">
+                    "With the blessings of Lord Ganesha and our families"
+                </p>
+                <p>
+                    <span class="parents">Mr. Chandukutty CM &amp; Mrs. Preethi MP</span><br>
+                    <span style="font-size: 0.8rem; color: var(--brown); opacity: 0.8;">PRATHEEKSHA (H), Mathil, Kannur</span><br>
+                    <span style="font-size: 0.9rem;" data-en="cordially invite you to the wedding of their beloved son" data-ml="അവരുടെ പ്രിയ മകന്റെ വിവാഹത്തിലേക്ക് നിങ്ങളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു">cordially invite you to the wedding of their beloved son</span>
+                </p>
+                <span class="couple-name">Pratheek Kumar MP</span>
+                <p data-en="with" data-ml="കൂടെ">with</p>
+                <span class="couple-name">Keerthy Bose</span>
+                <p>
+                    <span style="font-size: 0.9rem;" data-en="beloved daughter of" data-ml="പ്രിയ മകൾ">beloved daughter of</span><br>
+                    <span class="parents">Mr. Bose M R &amp; Mrs. Mini Bose</span><br>
+                    <span style="font-size: 0.8rem; color: var(--brown); opacity: 0.8;">Mankuzhithundiyil (H), Thykoodam, Ernakulam</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section" id="countdown">
+        <p class="countdown-label reveal" data-en="Counting Down to Our Big Day" data-ml="ഞങ്ങളുടെ വിശേഷ ദിവസത്തിലേക്ക്">Counting Down to Our Big Day</p>
+        <div class="countdown-grid reveal">
+            <div class="countdown-item">
+                <div class="countdown-number" id="cd-days">--</div>
+                <div class="countdown-unit" data-en="Days" data-ml="ദിവസം">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="cd-hours">--</div>
+                <div class="countdown-unit" data-en="Hours" data-ml="മണിക്കൂർ">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="cd-minutes">--</div>
+                <div class="countdown-unit" data-en="Minutes" data-ml="മിനിറ്റ്">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="cd-seconds">--</div>
+                <div class="countdown-unit" data-en="Seconds" data-ml="സെക്കൻഡ്">Seconds</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- Events Section -->
+    <section class="section" id="events">
+        <h2 class="section-title reveal" data-en="Wedding Events" data-ml="വിവാഹ ചടങ്ങുകൾ">Wedding Events</h2>
+        <p class="section-subtitle reveal" data-en="Join us in celebration" data-ml="ആഘോഷത്തിൽ പങ്കുചേരുക">Join us in celebration</p>
+
+        <div class="events-grid">
+            <!-- Wedding -->
+            <div class="event-card reveal">
+                <div class="event-icon">🪔</div>
+                <h3 class="event-type" data-en="Wedding Ceremony" data-ml="വിവാഹ ചടങ്ങ്">Wedding Ceremony</h3>
+                <div class="event-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Saturday, September 5, 2026</span>
+                </div>
+                <div class="event-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    <span>12:00 PM (Muhurtham)</span>
+                </div>
+                <div class="event-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Ayodhya Auditorium, Payyanur</span>
+                </div>
+                <div class="event-btn-group">
+                    <a href="https://maps.app.goo.gl/bMSRKnxjTdr2D6A16" target="_blank" class="btn btn-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span data-en="Get Directions" data-ml="ദിശ കാണുക">Get Directions</span>
+                    </a>
+                    <button class="btn btn-outline" onclick="addToCalendar('wedding')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span data-en="Add to Calendar" data-ml="കലണ്ടറിൽ ചേർക്കുക">Add to Calendar</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Reception -->
+            <div class="event-card reveal">
+                <div class="event-icon">🎊</div>
+                <h3 class="event-type" data-en="Reception" data-ml="സ്വീകരണം">Reception</h3>
+                <div class="event-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Saturday, September 12, 2026</span>
+                </div>
+                <div class="event-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                    <span>6:00 PM Onwards</span>
+                </div>
+                <div class="event-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>St. Raphel's Parish Hall, Kochi</span>
+                </div>
+                <div class="event-btn-group">
+                    <a href="https://maps.app.goo.gl/TVuLtTZnU4ucnaMC7" target="_blank" class="btn btn-gold">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span data-en="Get Directions" data-ml="ദിശ കാണുക">Get Directions</span>
+                    </a>
+                    <button class="btn btn-outline" onclick="addToCalendar('reception')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span data-en="Add to Calendar" data-ml="കലണ്ടറിൽ ചേർക്കുക">Add to Calendar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- Our Story -->
+    <section class="section" id="story">
+        <h2 class="section-title reveal" data-en="Our Story" data-ml="ഞങ്ങളുടെ കഥ">Our Story</h2>
+        <p class="section-subtitle reveal" data-en="How it all began" data-ml="എല്ലാം ആരംഭിച്ചത് എങ്ങനെ">How it all began</p>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Where It All Began</div>
+                    <div class="timeline-title" data-en="Two Hearts, One Hospital" data-ml="രണ്ട് ഹൃദയങ്ങൾ, ഒരു ആശുപത്രി">Two Hearts, One Hospital</div>
+                    <p class="timeline-desc" data-en="Fate had its own plans when Pratheek and Keerthy both found themselves working at the same hospital. What started as familiar faces in the corridors soon turned into lingering conversations, shared coffee breaks, and a connection neither of them could ignore." data-ml="പ്രതീക്കും കീർത്തിയും ഒരേ ആശുപത്രിയിൽ ജോലി ചെയ്തപ്പോൾ വിധി അതിന്റെ സ്വന്തം പദ്ധതികൾ ആസൂത്രണം ചെയ്തു.">Fate had its own plans when Pratheek and Keerthy both found themselves working at the same hospital. What started as familiar faces in the corridors soon turned into lingering conversations, shared coffee breaks, and a connection neither of them could ignore.</p>
+                    <img src="photos/photo_10.jpeg" alt="Pratheek and Keerthy" class="timeline-img" loading="lazy">
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">A New Chapter in the UK</div>
+                    <div class="timeline-title" data-en="Miles Apart, Hearts Together" data-ml="ദൂരെ, പക്ഷേ ഹൃദയങ്ങൾ ഒരുമിച്ച്">Miles Apart, Hearts Together</div>
+                    <p class="timeline-desc" data-en="When Pratheek moved to the United Kingdom, the distance only deepened what they already felt. Late-night video calls across time zones, handwritten letters, and the quiet ache of missing someone — until the day Keerthy made the leap and joined him in the UK." data-ml="പ്രതീക് യുകെയിലേക്ക് മാറിയപ്പോൾ, ദൂരം അവർ ഇതിനകം അനുഭവിച്ചത് ആഴമേറിയതാക്കി. കീർത്തി യുകെയിൽ അദ്ദേഹത്തോടൊപ്പം ചേരുന്നത് വരെ.">When Pratheek moved to the United Kingdom, the distance only deepened what they already felt. Late-night video calls across time zones, handwritten letters, and the quiet ache of missing someone — until the day Keerthy made the leap and joined him in the UK.</p>
+                    <img src="photos/photo_14.jpeg" alt="Together in the UK" class="timeline-img" loading="lazy">
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">Love in Every Season</div>
+                    <div class="timeline-title" data-en="Falling in Love, All Over Again" data-ml="വീണ്ടും പ്രണയത്തിലേക്ക്">Falling in Love, All Over Again</div>
+                    <p class="timeline-desc" data-en="Together in a new country, they built a world of their own — weekend adventures through the Scottish Highlands, cosy evenings with home-cooked Kerala meals, and a love that grew stronger with every shared sunrise. Every moment felt like coming home." data-ml="ഒരു പുതിയ രാജ്യത്ത് ഒരുമിച്ച്, അവർ സ്വന്തമായ ഒരു ലോകം കെട്ടിപ്പടുത്തു — ഓരോ നിമിഷവും വീട്ടിലേക്ക് മടങ്ങുന്നതുപോലെ തോന്നി.">Together in a new country, they built a world of their own — weekend adventures through the Scottish Highlands, cosy evenings with home-cooked Kerala meals, and a love that grew stronger with every shared sunrise. Every moment felt like coming home.</p>
+                    <img src="photos/photo_01.jpeg" alt="In love" class="timeline-img" loading="lazy">
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot" style="background: var(--red); box-shadow: 0 0 0 2px var(--red);"></div>
+                <div class="timeline-content" style="border-color: var(--red);">
+                    <div class="timeline-year">November 25, 2025</div>
+                    <div class="timeline-title" data-en="The Proposal — Her Birthday Surprise" data-ml="പ്രൊപ്പോസൽ — അവളുടെ ജന്മദിന സർപ്രൈസ്">The Proposal — Her Birthday Surprise</div>
+                    <p class="timeline-desc" data-en="On Keerthy's birthday, Pratheek had planned the most magical surprise. Surrounded by fairy lights and the warm glow of a Christmas tree, he got down on one knee and asked her to be his forever. With tears of joy and a heart overflowing with love — she said YES!" data-ml="കീർത്തിയുടെ ജന്മദിനത്തിൽ, പ്രതീക് ഏറ്റവും മാന്ത്രികമായ സർപ്രൈസ് ആസൂത്രണം ചെയ്തു. അദ്ദേഹം മുട്ടുകുത്തി ചോദിച്ചു — അവൾ YES എന്ന് പറഞ്ഞു!">On Keerthy's birthday, Pratheek had planned the most magical surprise. Surrounded by fairy lights and the warm glow of a Christmas tree, he got down on one knee and asked her to be his forever. With tears of joy and a heart overflowing with love — she said YES!</p>
+                    <img src="photos/photo_15.jpeg" alt="The Proposal" class="timeline-img" loading="lazy">
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot" style="background: var(--gold); box-shadow: 0 0 0 2px var(--gold);"></div>
+                <div class="timeline-content" style="border-color: var(--gold);">
+                    <div class="timeline-year">September 5, 2026</div>
+                    <div class="timeline-title" data-en="Forever Begins" data-ml="എന്നെന്നേക്കുമായി">Forever Begins</div>
+                    <p class="timeline-desc" data-en="From a hospital corridor in Kerala to the rolling hills of the UK, their journey has been nothing short of extraordinary. And now, surrounded by the blessings of family and friends, they begin the most beautiful chapter of all. We can't wait to celebrate with you!" data-ml="കേരളത്തിലെ ഒരു ആശുപത്രി ഇടനാഴിയിൽ നിന്ന് യുകെയുടെ മനോഹരമായ കുന്നുകളിലേക്ക്. ഇപ്പോൾ ഏറ്റവും മനോഹരമായ അധ്യായം ആരംഭിക്കുന്നു!">From a hospital corridor in Kerala to the rolling hills of the UK, their journey has been nothing short of extraordinary. And now, surrounded by the blessings of family and friends, they begin the most beautiful chapter of all. We can't wait to celebrate with you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="section" id="gallery">
+        <h2 class="section-title reveal" data-en="Our Gallery" data-ml="ഞങ്ങളുടെ ഗാലറി">Our Gallery</h2>
+        <p class="section-subtitle reveal" data-en="Moments we cherish" data-ml="ഞങ്ങൾ കാത്തുസൂക്ഷിക്കുന്ന നിമിഷങ്ങൾ">Moments we cherish</p>
+
+        <div class="gallery-grid reveal">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="photos/photo_11.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="photos/photo_05.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="photos/photo_17.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="photos/photo_02.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="photos/photo_12.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="photos/photo_06.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="photos/photo_09.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="photos/photo_07.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="photos/photo_08.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="photos/photo_13.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="photos/photo_03.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="photos/photo_16.jpeg" alt="Pratheek and Keerthy" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+        <img id="lightbox-img" src="" alt="Gallery photo">
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+    </div>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section section" id="rsvp">
+        <h2 class="section-title reveal" data-en="RSVP" data-ml="സാന്നിധ്യം അറിയിക്കുക">RSVP</h2>
+        <p class="section-subtitle reveal" data-en="Kindly respond by August 20, 2026" data-ml="ദയവായി ഓഗസ്റ്റ് 20, 2026 ന് മുമ്പ് അറിയിക്കുക">Kindly respond by August 20, 2026</p>
+
+        <div class="rsvp-form reveal" id="rsvpFormContainer">
+            <form id="rsvpForm" onsubmit="handleRSVP(event)">
+                <div class="form-group">
+                    <label data-en="Your Full Name" data-ml="പേര്">Your Full Name</label>
+                    <input type="text" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Phone / WhatsApp Number" data-ml="ഫോൺ നമ്പർ">Phone / WhatsApp Number</label>
+                    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Will you attend?" data-ml="നിങ്ങൾ വരുമോ?">Will you attend?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="attend-yes" name="attending" value="yes" required>
+                            <label for="attend-yes" data-en="Joyfully Accept" data-ml="സന്തോഷത്തോടെ">🎉 Joyfully Accept</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="attend-no" name="attending" value="no">
+                            <label for="attend-no" data-en="Regretfully Decline" data-ml="ഖേദത്തോടെ">😔 Regretfully Decline</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Which event(s) will you attend?" data-ml="ഏത് ചടങ്ങിൽ പങ്കെടുക്കും?">Which event(s) will you attend?</label>
+                    <div class="event-checkbox-group">
+                        <label class="event-checkbox">
+                            <input type="checkbox" name="events" value="wedding">
+                            <span data-en="Wedding Ceremony — Sep 5, Payyanur" data-ml="വിവാഹം — സെപ്റ്റംബർ 5, പയ്യന്നൂർ">Wedding Ceremony — Sep 5, Payyanur</span>
+                        </label>
+                        <label class="event-checkbox">
+                            <input type="checkbox" name="events" value="reception">
+                            <span data-en="Reception — Sep 12, Kochi" data-ml="സ്വീകരണം — സെപ്റ്റംബർ 12, കൊച്ചി">Reception — Sep 12, Kochi</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Number of Guests (including you)" data-ml="അതിഥികളുടെ എണ്ണം">Number of Guests (including you)</label>
+                    <select name="guests">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Dietary Preferences" data-ml="ഭക്ഷണ മുൻഗണന">Dietary Preferences</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="diet-veg" name="diet" value="vegetarian">
+                            <label for="diet-veg">🥬 Vegetarian</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="diet-nonveg" name="diet" value="non-vegetarian">
+                            <label for="diet-nonveg">🍗 Non-Veg</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Wishes for the Couple" data-ml="ദമ്പതികൾക്ക് ആശംസകൾ">Wishes for the Couple</label>
+                    <textarea name="wishes" placeholder="Write your heartfelt wishes..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-red" style="width: 100%; font-size: 1rem; padding: 16px;">
+                    <span data-en="Send RSVP" data-ml="RSVP അയയ്ക്കുക">Send RSVP</span> 💌
+                </button>
+            </form>
+        </div>
+
+        <div class="rsvp-success" id="rsvpSuccess">
+            <div class="checkmark">✨</div>
+            <h3 data-en="Thank You!" data-ml="നന്ദി!">Thank You!</h3>
+            <p data-en="Your RSVP has been received. We look forward to celebrating with you!" data-ml="നിങ്ങളുടെ RSVP ലഭിച്ചു. നിങ്ങളോടൊപ്പം ആഘോഷിക്കാൻ ഞങ്ങൾ ആഗ്രഹിക്കുന്നു!">Your RSVP has been received. We look forward to celebrating with you!</p>
+        </div>
+    </section>
+
+    <!-- Add to Calendar -->
+    <section class="calendar-section section" id="calendar">
+        <h2 class="section-title reveal" data-en="Save the Date" data-ml="തീയതി ഓർക്കുക">Save the Date</h2>
+        <p class="section-subtitle reveal" data-en="Add to your calendar" data-ml="കലണ്ടറിൽ ചേർക്കുക">Add to your calendar</p>
+
+        <div class="calendar-buttons reveal">
+            <button class="btn btn-gold" onclick="addToCalendar('wedding')">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Wedding — Sep 5
+            </button>
+            <button class="btn btn-red" onclick="addToCalendar('reception')">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Reception — Sep 12
+            </button>
+        </div>
+
+        <!-- Calendar options modal -->
+        <div id="calendarModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center; padding:20px;">
+            <div style="background:var(--white); border-radius:16px; padding:30px; max-width:340px; width:100%; text-align:center; border:2px solid var(--kasavu-border);">
+                <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--red-deep); margin-bottom:20px;">Add to Calendar</h3>
+                <a id="gcalLink" href="#" target="_blank" class="btn btn-gold" style="width:100%; margin-bottom:10px; text-decoration:none;">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm6.28 16.744H5.72V7.256h12.56v9.488z"/></svg>
+                    Google Calendar
+                </a>
+                <a id="icsLink" href="#" download class="btn btn-outline" style="width:100%; text-decoration:none;">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/><path d="M4 10h16"/></svg>
+                    Apple Calendar (.ics)
+                </a>
+                <button onclick="closeCalendarModal()" style="margin-top:16px; background:none; border:none; color:var(--brown); cursor:pointer; font-family:'Lora',serif; font-size:0.9rem;">Cancel</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- Location Section -->
+    <section class="section" id="location">
+        <h2 class="section-title reveal" data-en="Venue & Location" data-ml="സ്ഥലവും ലൊക്കേഷനും">Venue & Location</h2>
+        <p class="section-subtitle reveal" data-en="Find your way to us" data-ml="ഞങ്ങളിലേക്കുള്ള വഴി">Find your way to us</p>
+
+        <div class="location-cards">
+            <div class="location-card reveal">
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps?q=Ayodhya+Auditorium+Payyanur+SS+Temple+Road+Kerala+670307&output=embed" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="location-info">
+                    <h3 class="location-name" data-en="Wedding Ceremony" data-ml="വിവാഹ ചടങ്ങ്">Wedding Ceremony</h3>
+                    <p class="location-address">
+                        Ayodhya Auditorium<br>
+                        SS Temple Road, Payyanur<br>
+                        Kerala 670307<br>
+                        <em>September 5, 2026 at 12:00 PM</em>
+                    </p>
+                    <a href="https://maps.app.goo.gl/bMSRKnxjTdr2D6A16" target="_blank" class="btn btn-gold">
+                        📍 Open in Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="location-card reveal">
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps?q=St+Raphels+Parish+Hall+Kochi+Kerala&output=embed" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="location-info">
+                    <h3 class="location-name" data-en="Reception" data-ml="സ്വീകരണം">Reception</h3>
+                    <p class="location-address">
+                        St. Raphel's Parish Hall<br>
+                        Kochi, Kerala, India<br>
+                        <em>September 12, 2026 at 6:00 PM</em>
+                    </p>
+                    <a href="https://maps.app.goo.gl/TVuLtTZnU4ucnaMC7" target="_blank" class="btn btn-gold">
+                        📍 Open in Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section class="dresscode-section section" id="dresscode">
+        <h2 class="section-title reveal" data-en="Dress Code" data-ml="വസ്ത്രധാരണം">Dress Code</h2>
+        <p class="section-subtitle reveal" data-en="What to wear" data-ml="എന്ത് ധരിക്കണം">What to wear</p>
+
+        <div class="dresscode-grid reveal">
+            <div class="dresscode-card">
+                <h3 data-en="For Him" data-ml="അദ്ദേഹത്തിന്">👔 For Him</h3>
+                <p data-en="Traditional Kerala Mundu & Shirt or Formal Indian Ethnic Wear" data-ml="പരമ്പരാഗത മുണ്ടും ഷർട്ടും അല്ലെങ്കിൽ ഇന്ത്യൻ എത്‌നിക് വസ്ത്രം">Traditional Kerala Mundu & Shirt or Formal Indian Ethnic Wear</p>
+            </div>
+            <div class="dresscode-card">
+                <h3 data-en="For Her" data-ml="അവൾക്ക്">👗 For Her</h3>
+                <p data-en="Saree, Kerala Kasavu Saree, or Elegant Indian Ethnic Wear" data-ml="സാരി, കേരള കസവ് സാരി, അല്ലെങ്കിൽ എത്‌നിക് വസ്ത്രം">Saree, Kerala Kasavu Saree, or Elegant Indian Ethnic Wear</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- Accommodation -->
+    <section class="section" id="accommodation">
+        <h2 class="section-title reveal" data-en="Accommodation" data-ml="താമസ സൗകര്യം">Accommodation</h2>
+        <p class="section-subtitle reveal" data-en="For outstation guests" data-ml="പുറത്തുനിന്നുള്ള അതിഥികൾക്ക്">For outstation guests</p>
+
+        <div class="accommodation-list reveal">
+            <div class="accommodation-item">
+                <div>
+                    <h4>Hotels near Payyanur</h4>
+                    <p>Near Wedding Venue</p>
+                </div>
+                <a href="https://www.google.com/maps/search/Hotels+near+Payyanur+Kerala" target="_blank" class="btn btn-outline" style="white-space: nowrap; padding: 8px 16px; font-size: 0.8rem;">View</a>
+            </div>
+            <div class="accommodation-item">
+                <div>
+                    <h4>Hotels near Kochi</h4>
+                    <p>Near Reception Venue</p>
+                </div>
+                <a href="https://www.google.com/maps/search/Hotels+near+Kochi+Kerala" target="_blank" class="btn btn-outline" style="white-space: nowrap; padding: 8px 16px; font-size: 0.8rem;">View</a>
+            </div>
+            <p style="text-align:center; font-size:0.85rem; color:var(--brown); margin-top:16px; font-style:italic;" data-en="Please contact us for help with accommodation arrangements" data-ml="താമസ ക്രമീകരണങ്ങൾക്ക് ഞങ്ങളെ ബന്ധപ്പെടുക">
+                Please contact us for help with accommodation arrangements
+            </p>
+        </div>
+    </section>
+
+    <!-- Guest Photos -->
+    <section class="section photos-upload-section" id="guestphotos">
+        <h2 class="section-title reveal" data-en="Share Your Photos" data-ml="നിങ്ങളുടെ ഫോട്ടോകൾ പങ്കിടുക">Share Your Photos</h2>
+        <p class="section-subtitle reveal" data-en="Captured a moment? Share it with us!" data-ml="ഒരു നിമിഷം പകർത്തിയോ? ഞങ്ങളുമായി പങ്കിടൂ!">Captured a moment? Share it with us!</p>
+
+        <div class="photos-upload-card reveal">
+            <div class="upload-icon">📸</div>
+            <h3 data-en="Add Your Photos & Videos" data-ml="ഫോട്ടോകളും വീഡിയോകളും ചേർക്കൂ">Add Your Photos & Videos</h3>
+            <p data-en="Help us collect beautiful memories from our celebration. Tap below to open our shared album and upload your photos and videos." data-ml="ഞങ്ങളുടെ ആഘോഷത്തിൽ നിന്നുള്ള മനോഹരമായ ഓർമ്മകൾ ശേഖരിക്കാൻ സഹായിക്കൂ.">Help us collect beautiful memories from our celebration. Tap below to open our shared album and upload your photos and videos.</p>
+            <a href="#" class="btn btn-gold" style="font-size: 1rem;">
+                📷 <span data-en="Open Shared Album" data-ml="ഷെയർഡ് ആൽബം തുറക്കുക">Open Shared Album</span>
+            </a>
+            <p style="font-size: 0.75rem; color: var(--brown); margin-top: 12px; opacity: 0.6;">
+                Google Photos shared album
+            </p>
+        </div>
+    </section>
+
+    <div class="kasavu-divider"></div>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <h2 class="section-title reveal" data-en="Contact Us" data-ml="ബന്ധപ്പെടുക">Contact Us</h2>
+        <p class="section-subtitle reveal" data-en="For any queries" data-ml="ഏതെങ്കിലും ചോദ്യങ്ങൾക്ക്">For any queries</p>
+
+        <div class="contact-grid reveal" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="contact-card">
+                <h4>Pratheesh Kumar</h4>
+                <p>(Groom's Brother)</p>
+                <p><a href="tel:+918281418564">+91 82814 18564</a></p>
+            </div>
+            <div class="contact-card">
+                <h4>Syamdeep</h4>
+                <p>(Bride's Brother-in-law)</p>
+                <p><a href="tel:+919645827363">+91 96458 27363</a></p>
+            </div>
+            <div class="contact-card">
+                <h4>Deepthy</h4>
+                <p>(Bride's Sister)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-names">Pratheek & Keerthy</div>
+        <div class="footer-date">05 &bull; 09 &bull; 2026</div>
+        <div class="footer-hashtag">#PratheekWedsKeerthy</div>
+        <p class="footer-note" data-en="Made with ❤ for our special day" data-ml="ഞങ്ങളുടെ വിശേഷ ദിവസത്തിനായി ❤ ഉപയോഗിച്ച് നിർമ്മിച്ചത്">Made with ❤ for our special day</p>
+    </footer>
+
+    <!-- WhatsApp Share Button -->
+    <a class="whatsapp-fab" href="https://wa.me/?text=You're%20invited%20to%20Pratheek%20%26%20Keerthy's%20Wedding!%20%F0%9F%92%8D%0ASep%205%2C%202026%20%E2%80%A2%20Ayodhya%20Auditorium%2C%20Payyanur%0ASep%2012%2C%202026%20%E2%80%A2%20St.%20Raphel's%20Parish%20Hall%2C%20Kochi%0A%0ARSVP%20%26%20Details%3A%20https%3A%2F%2Fpratheekwedskeerthy.com" target="_blank" title="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        // ===== COUNTDOWN TIMER =====
+        function updateCountdown() {
+            const wedding = new Date('2026-09-05T12:00:00+05:30').getTime();
+            const now = new Date().getTime();
+            const diff = wedding - now;
+
+            if (diff <= 0) {
+                document.getElementById('cd-days').textContent = '0';
+                document.getElementById('cd-hours').textContent = '0';
+                document.getElementById('cd-minutes').textContent = '0';
+                document.getElementById('cd-seconds').textContent = '0';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').textContent = days;
+            document.getElementById('cd-hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('cd-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('cd-seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // ===== SCROLL REVEAL =====
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ===== NAVIGATION =====
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 400) {
+                nav.classList.add('visible');
+            } else {
+                nav.classList.remove('visible');
+            }
+        });
+
+        // ===== LIGHTBOX =====
+        const photos = ['photos/photo_11.jpeg', 'photos/photo_05.jpeg', 'photos/photo_17.jpeg', 'photos/photo_02.jpeg', 'photos/photo_12.jpeg', 'photos/photo_06.jpeg', 'photos/photo_09.jpeg', 'photos/photo_07.jpeg', 'photos/photo_08.jpeg', 'photos/photo_13.jpeg', 'photos/photo_03.jpeg', 'photos/photo_16.jpeg'];
+        let currentPhoto = 0;
+
+        function openLightbox(index) {
+            currentPhoto = index;
+            document.getElementById('lightbox-img').src = photos[index];
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(dir) {
+            currentPhoto = (currentPhoto + dir + photos.length) % photos.length;
+            document.getElementById('lightbox-img').src = photos[currentPhoto];
+        }
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // ===== CALENDAR =====
+        const events = {
+            wedding: {
+                title: 'Pratheek & Keerthy - Wedding Ceremony',
+                start: '20260905T063000Z', // 12:00 PM IST = 6:30 AM UTC
+                end: '20260905T103000Z',
+                location: 'Ayodhya Auditorium, SS Temple Road, Payyanur, Kerala 670307',
+                description: 'Wedding ceremony of Pratheek Kumar MP & Keerthy Bose. Muhurtham at 12:00 PM. Directions: https://maps.app.goo.gl/bMSRKnxjTdr2D6A16'
+            },
+            reception: {
+                title: 'Pratheek & Keerthy - Reception',
+                start: '20260912T123000Z', // 6:00 PM IST = 12:30 PM UTC
+                end: '20260912T163000Z',
+                location: 'St. Raphel\'s Parish Hall, Kochi, Kerala, India',
+                description: 'Wedding reception of Pratheek Kumar MP & Keerthy Bose. Starts at 6:00 PM. Directions: https://maps.app.goo.gl/TVuLtTZnU4ucnaMC7'
+            }
+        };
+
+        function addToCalendar(eventType) {
+            const ev = events[eventType];
+
+            // Google Calendar link
+            const gcalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(ev.title)}&dates=${ev.start}/${ev.end}&details=${encodeURIComponent(ev.description)}&location=${encodeURIComponent(ev.location)}`;
+
+            // ICS file
+            const icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//PratheekWedsKeerthy//EN',
+                'BEGIN:VEVENT',
+                `DTSTART:${ev.start}`,
+                `DTEND:${ev.end}`,
+                `SUMMARY:${ev.title}`,
+                `DESCRIPTION:${ev.description}`,
+                `LOCATION:${ev.location}`,
+                'STATUS:CONFIRMED',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const icsUrl = URL.createObjectURL(blob);
+
+            // Show modal
+            document.getElementById('gcalLink').href = gcalUrl;
+            document.getElementById('icsLink').href = icsUrl;
+            document.getElementById('icsLink').download = `pratheek-keerthy-${eventType}.ics`;
+            document.getElementById('calendarModal').style.display = 'flex';
+        }
+
+        function closeCalendarModal() {
+            document.getElementById('calendarModal').style.display = 'none';
+        }
+
+        document.getElementById('calendarModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeCalendarModal();
+        });
+
+        // ===== RSVP HANDLER =====
+        function handleRSVP(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                if (data[key]) {
+                    data[key] = Array.isArray(data[key]) ? [...data[key], value] : [data[key], value];
+                } else {
+                    data[key] = value;
+                }
+            });
+
+            console.log('RSVP Data:', data);
+
+            // TODO: Connect to backend (Google Sheets / Formspree / Firebase)
+            // Example with Formspree:
+            // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            //     method: 'POST',
+            //     body: formData,
+            //     headers: { 'Accept': 'application/json' }
+            // });
+
+            // Show success
+            document.getElementById('rsvpFormContainer').style.display = 'none';
+            document.getElementById('rsvpSuccess').classList.add('show');
+
+            // Scroll to success message
+            document.getElementById('rsvpSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // ===== LANGUAGE TOGGLE =====
+        let currentLang = 'en';
+
+        function setLang(lang) {
+            currentLang = lang;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.trim() === (lang === 'en' ? 'EN' : 'മല'));
+            });
+
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        // skip form fields
+                    } else {
+                        el.textContent = text;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
